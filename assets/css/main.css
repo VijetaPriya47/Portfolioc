@@ -95,3 +95,38 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     aspect-ratio: 1/1;
   }
 }
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.github-btn {
+  background-color: #24292e;
+  color: white;
+}
+
+.demo-btn {
+  background-color: #0070f3;
+  color: white;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Update slider item styles to accommodate buttons */
+.slider--item {
+  padding-bottom: 20px;
+}
