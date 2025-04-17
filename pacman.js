@@ -1,13 +1,23 @@
-const canvas= document.querySelector('canvas')
-
+const canvas = document.querySelector('#gameCanvas')
 const c = canvas.getContext('2d')
+const scoreEl = document.querySelector('#scoreEl')
 
-const scoreEl= document.querySelector('#scoreEl')
-console.log
+// Remove these lines that set canvas to window size
+// canvas.width = innerWidth
+// canvas.height = innerHeight
 
+// Add this function to handle canvas sizing
+function resizeCanvas() {
+    const container = canvas.parentElement;
+    canvas.width = container.clientWidth;
+    canvas.height = container.clientHeight;
+}
 
-canvas.width = innerWidth
-canvas.height = innerHeight
+// Call resize on load
+resizeCanvas();
+
+// Add event listener for window resize
+window.addEventListener('resize', resizeCanvas);
 
 class Boundary{
     static width = 40
